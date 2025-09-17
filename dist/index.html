@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ying · Portfolio</title>
+    <meta name="description" content="Ying's portfolio: projects, demos, and code." />
+
+    <!-- Tailwind CSS via CDN (v3) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind config for dark mode and custom colors (scoped minimal)
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              base: {
+                900: '#0b0f17',
+                800: '#111827',
+                700: '#1f2937'
+              },
+              accent: {
+                500: '#22d3ee',
+                400: '#67e8f9'
+              }
+            },
+            fontFamily: {
+              sans: [
+                'Inter',
+                'ui-sans-serif',
+                'system-ui',
+                'Segoe UI',
+                'Roboto',
+                'Helvetica Neue',
+                'Arial',
+                'Noto Sans',
+                'Apple Color Emoji',
+                'Segoe UI Emoji',
+                'Segoe UI Symbol',
+                'Noto Color Emoji'
+              ]
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="bg-base-900 text-gray-200 min-h-screen selection:bg-accent-500/20 selection:text-accent-400">
+    <header class="sticky top-0 z-20 backdrop-blur supports-backdrop-blur:bg-base-900/60 bg-base-900/80 border-b border-white/5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        <a class="text-lg sm:text-xl font-semibold tracking-tight hover:text-accent-400 transition" href="/">Ying</a>
+        <nav class="flex gap-4 text-sm">
+          <a href="https://github.com/" target="_blank" rel="noopener" class="text-gray-400 hover:text-accent-400 transition">GitHub</a>
+          <a href="#projects" class="text-gray-400 hover:text-accent-400 transition">Projects</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+      
+  <!-- Hero -->
+  <section class="py-8 sm:py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+          <span class="text-gray-300">Hi, I'm</span>
+          <span class="block mt-1 bg-gradient-to-r from-accent-400 to-cyan-400 bg-clip-text text-transparent">Ying</span>
+        </h1>
+        <p class="mt-5 text-lg text-gray-400 max-w-2xl">
+          I build dope shit — elegant, fast, and reliable apps on the web.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#projects" class="inline-flex items-center gap-2 rounded-md bg-accent-500/20 text-accent-400 px-4 py-2 font-medium ring-1 ring-inset ring-accent-500/30 hover:bg-accent-500/30 transition">
+            View Projects
+          </a>
+          <a href="https://github.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md bg-white/5 text-gray-200 px-4 py-2 font-medium ring-1 ring-inset ring-white/10 hover:bg-white/10 transition">
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/0 p-6">
+          <div class="absolute inset-0 -z-10 opacity-40" aria-hidden>
+            <div class="pointer-events-none absolute -top-24 -right-24 h-56 w-56 rounded-full bg-accent-500/20 blur-3xl"></div>
+          </div>
+          <p class="text-sm text-gray-400">About</p>
+          <p class="mt-2 text-gray-300">Full‑stack engineer focused on delightful UX, performance, and clean architecture.</p>
+          <ul class="mt-4 text-sm text-gray-400 list-disc list-inside space-y-1">
+            <li>Python, Flask, FastAPI</li>
+            <li>TypeScript, React, Next.js</li>
+            <li>Tailwind, design systems</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-6">
+    <div class="flex items-end justify-between">
+      <h2 class="text-2xl sm:text-3xl font-bold">Projects</h2>
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+        <article class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.05] transition">
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-100 group-hover:text-accent-400 transition">AI Notes Summarizer</h3>
+            <p class="mt-2 text-sm text-gray-400">Summarize long notes into bite-sized bullets with extractive and abstractive pipelines.</p>
+            <div class="mt-4 flex gap-3">
+              
+                <a class="inline-flex items-center gap-1 rounded-md bg-accent-500/20 text-accent-400 px-3 py-1.5 text-sm font-medium ring-1 ring-inset ring-accent-500/30 hover:bg-accent-500/30 transition" href="https://example.com/notes-demo" target="_blank" rel="noopener">
+                  Live demo
+                </a>
+              
+              
+                <a class="inline-flex items-center gap-1 rounded-md bg-white/5 text-gray-200 px-3 py-1.5 text-sm font-medium ring-1 ring-inset ring-white/10 hover:bg-white/10 transition" href="https://github.com/example/ai-notes" target="_blank" rel="noopener">
+                  GitHub
+                </a>
+              
+            </div>
+          </div>
+        </article>
+      
+        <article class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.05] transition">
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-100 group-hover:text-accent-400 transition">Realtime Chat App</h3>
+            <p class="mt-2 text-sm text-gray-400">Socket-powered, minimal chat with presence, avatars, and message persistence.</p>
+            <div class="mt-4 flex gap-3">
+              
+                <a class="inline-flex items-center gap-1 rounded-md bg-accent-500/20 text-accent-400 px-3 py-1.5 text-sm font-medium ring-1 ring-inset ring-accent-500/30 hover:bg-accent-500/30 transition" href="https://example.com/chat" target="_blank" rel="noopener">
+                  Live demo
+                </a>
+              
+              
+                <a class="inline-flex items-center gap-1 rounded-md bg-white/5 text-gray-200 px-3 py-1.5 text-sm font-medium ring-1 ring-inset ring-white/10 hover:bg-white/10 transition" href="https://github.com/example/realtime-chat" target="_blank" rel="noopener">
+                  GitHub
+                </a>
+              
+            </div>
+          </div>
+        </article>
+      
+        <article class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.05] transition">
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-100 group-hover:text-accent-400 transition">Image Optimizer CLI</h3>
+            <p class="mt-2 text-sm text-gray-400">Compress and batch-optimize images with smart defaults and lossless options.</p>
+            <div class="mt-4 flex gap-3">
+              
+              
+                <a class="inline-flex items-center gap-1 rounded-md bg-white/5 text-gray-200 px-3 py-1.5 text-sm font-medium ring-1 ring-inset ring-white/10 hover:bg-white/10 transition" href="https://github.com/example/image-optimizer-cli" target="_blank" rel="noopener">
+                  GitHub
+                </a>
+              
+            </div>
+          </div>
+        </article>
+      
+    </div>
+  </section>
+
+    </main>
+
+    <footer class="mt-12 border-t border-white/5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 text-sm text-gray-500">
+        <p>© <span id="year"></span> Ying. Built with Flask & Tailwind.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
