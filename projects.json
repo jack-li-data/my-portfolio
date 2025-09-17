@@ -1,7 +1,7 @@
 [
   {
-    "title": "AI Notes Summarizer",
-    "description": "Summarize long notes into bite-sized bullets with extractive and abstractive pipelines.",
+    "title": "Personal Journal",
+    "description": "a journal app to record daily thoughts and experiences.",
     "demo_url": "https://example.com/notes-demo",
     "github_url": "https://github.com/example/ai-notes"
   },
