@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}Ying · Portfolio{% endblock %}
+
+{% block content %}
+  <!-- Hero -->
+  <section class="py-8 sm:py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+          <span class="text-gray-300">Hi, I'm</span>
+          <span class="block mt-1 bg-gradient-to-r from-accent-400 to-cyan-400 bg-clip-text text-transparent">Ying</span>
+        </h1>
+        <p class="mt-5 text-lg text-gray-400 max-w-2xl">
+          I build dope shit — elegant, fast, and reliable apps on the web.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#projects" class="inline-flex items-center gap-2 rounded-md bg-accent-500/20 text-accent-400 px-4 py-2 font-medium ring-1 ring-inset ring-accent-500/30 hover:bg-accent-500/30 transition">
+            View Projects
+          </a>
+          <a href="https://github.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md bg-white/5 text-gray-200 px-4 py-2 font-medium ring-1 ring-inset ring-white/10 hover:bg-white/10 transition">
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/0 p-6">
+          <div class="absolute inset-0 -z-10 opacity-40" aria-hidden>
+            <div class="pointer-events-none absolute -top-24 -right-24 h-56 w-56 rounded-full bg-accent-500/20 blur-3xl"></div>
+          </div>
+          <p class="text-sm text-gray-400">About</p>
+          <p class="mt-2 text-gray-300">Full‑stack engineer focused on delightful UX, performance, and clean architecture.</p>
+          <ul class="mt-4 text-sm text-gray-400 list-disc list-inside space-y-1">
+            <li>Python, Flask, FastAPI</li>
+            <li>TypeScript, React, Next.js</li>
+            <li>Tailwind, design systems</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-6">
+    <div class="flex items-end justify-between">
+      <h2 class="text-2xl sm:text-3xl font-bold">Projects</h2>
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for p in projects %}
+        <article class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.05] transition">
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-100 group-hover:text-accent-400 transition">{{ p.title }}</h3>
+            <p class="mt-2 text-sm text-gray-400">{{ p.description }}</p>
+            <div class="mt-4 flex gap-3">
+              {% if p.demo_url %}
+                <a class="inline-flex items-center gap-1 rounded-md bg-accent-500/20 text-accent-400 px-3 py-1.5 text-sm font-medium ring-1 ring-inset ring-accent-500/30 hover:bg-accent-500/30 transition" href="{{ p.demo_url }}" target="_blank" rel="noopener">
+                  Live demo
+                </a>
+              {% endif %}
+              {% if p.github_url %}
+                <a class="inline-flex items-center gap-1 rounded-md bg-white/5 text-gray-200 px-3 py-1.5 text-sm font-medium ring-1 ring-inset ring-white/10 hover:bg-white/10 transition" href="{{ p.github_url }}" target="_blank" rel="noopener">
+                  GitHub
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        </article>
+      {% else %}
+        <p class="text-gray-400">No projects yet. Add some to <code>projects.json</code>.</p>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}
