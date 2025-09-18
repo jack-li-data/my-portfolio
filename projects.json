@@ -14,7 +14,7 @@
   {
     "title": "Image Optimizer CLI",
     "description": "Compress and batch-optimize images with smart defaults and lossless options.",
-    "demo_url": "https://example.com/image-optimizer",
+    "demo_url": "https://example.com/image-application",
     "github_url": "https://github.com/example/image-optimizer-cli"
   }
 ]
