@@ -1,7 +1,7 @@
 {
-  "version": 2,
-  "builds": [],
-  "routes": [
-    { "src": "/(.*)", "dest": "/dist/$1" }
-  ]
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "pip install -r requirements.txt",
+  "buildCommand": "python build_static.py",
+  "outputDirectory": "dist",
+  "cleanUrls": true
 }
