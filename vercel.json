@@ -1,12 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "builds": [
-    {
-      "src": "build_static.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "installCommand": "pip install -r requirements.txt",
-  "buildCommand": "python build_static.py",
+  "framework": null,
+  "installCommand": "python3 -m pip install -r requirements.txt",
+  "buildCommand": "python3 build_static.py",
   "outputDirectory": "dist"
 }
